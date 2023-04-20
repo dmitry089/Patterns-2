@@ -35,7 +35,7 @@ public class DataGenerator {
                 .when() // "когда"
                 .post("/api/system/users") // на какой путь, относительно BaseUri отправляем запрос
                 .then() // "тогда ожидаем"
-                .statusCode(200); // код 200 OK
+                .statusCode(200); // код 200 OK 
     }
 
     public static String getRandomLogin() {
@@ -57,7 +57,7 @@ public class DataGenerator {
         public static RegistrationDto getRegisteredUser(String status) {
             var registeredUser = getUser(status);
             sendRequest(registeredUser);
-            return  registeredUser;
+            return registeredUser;
         }
     }
 

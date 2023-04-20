@@ -14,10 +14,11 @@ public class AuthTest {
     void setup() {
         open("http://localhost:9999");
     }
+
     @Test
     @DisplayName("Should successfully login with active registered user")
     void shouldSuccessFullyLoginIfActiveRegisteredUser() {
-        var reqisteredUser =getRegisteredUser("active");
+        var reqisteredUser = getRegisteredUser("active");
         $("[data-test-id='login'] input").setValue(reqisteredUser.getLogin());
         $("[data-test-id='password'] input").setValue(reqisteredUser.getLogin());
         $("[data-test-id='action-login']input").click();
